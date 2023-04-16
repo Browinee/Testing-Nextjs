@@ -36,6 +36,7 @@ export async function getJSONfromFile<ItemType extends JsonDataType>(
   dbPath: string = defaultDbPath
 ): Promise<ItemType[]> {
   const filePath = path.join(dbPath, filename);
+
   const data = await fs.readFile(filePath);
   return JSON.parse(data.toString());
 }

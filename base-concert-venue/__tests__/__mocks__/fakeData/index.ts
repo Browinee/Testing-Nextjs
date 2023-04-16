@@ -8,7 +8,6 @@ import type { AuthUser } from "@/lib/features/users/types";
 
 // store fake data in JSON files for easier command-line db reset
 const JSON_FILEPATH = path.join(__dirname, "json");
-console.log("JSON_FILEPATH", { __dirname });
 export const readFakeData = async () => {
   const [fakeBands, fakeReservations, fakeShows, fakeUsers] = await Promise.all(
     [
